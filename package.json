@@ -1,0 +1,19 @@
+{
+  "name": "coffeeblog",
+  "version": "1.0.0",
+  "description": "A blog where you can find all sorts of information about various coffee types!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iremdnz/Coffee-Blog.git"
+  },
+  "author": "iremdnz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iremdnz/Coffee-Blog/issues"
+  },
+  "homepage": "https://github.com/iremdnz/Coffee-Blog#readme"
+}
