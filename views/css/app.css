@@ -1,0 +1,22 @@
+body{
+    background-color: cornflowerblue;
+}
+
+#navElement > li {
+    border-right: 1px solid black;
+}
+
+#contact{
+    border-right: none;
+}
+
+.li-0 {
+    padding: 0px !important;
+}
+
+.dropdown-menu-center {
+    left: 50% !important;
+    right: auto !important;
+    text-align: center !important;
+    transform: translate(-50%, 0) !important;
+}

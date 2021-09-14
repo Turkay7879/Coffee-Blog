@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="data:image/jpeg;base64,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"
+                    alt="" width="30" height="24">
+                Coffee
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+                <div class="col-9">
+                    <ul class="navbar-nav row" id="navList">
+                        <div class="col li-0" id="navElement">
+                            <li class="nav-item text-center">
+                                <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
+                            </li>
+                        </div>
+                        <div class="col li-0" id="navElement">
+                            <li class="nav-item dropdown text-center">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dünya Kahveleri
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item text-center" href="#">Latin Amerika</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-center" href="#">Afrika</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-center" href="#">Asya Pasifik</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="col li-0" id="navElement">
+                            <li class="nav-item dropdown text-center">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Demleme Çeşitleri
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item text-center" href="#">French Press</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-center" href="#">V60</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-center" href="#">Chemex</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-center" href="#">Tümünü Listele</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="col li-0" id="navElement">
+                            <li class="nav-item text-center">
+                                <a class="nav-link disabled">Mağaza</a>
+                            </li>
+                        </div>
+                        <div class="col li-0" id="navElement">
+                            <li class="nav-item text-center" id="contact">
+                                <a class="nav-link" aria-current="page" href="#">İletişim</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Aramak için yazın"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Ara</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
