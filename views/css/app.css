@@ -17,7 +17,7 @@ body{
 }
 
 /* Navbarda küçük ekran dışında dropdown listeleri ortala */
-@media (min-width: lg) {
+@media (min-width: 992px) {
     .dropdown-menu-center {
         left: 50% !important;
         right: auto !important;
@@ -44,6 +44,10 @@ body{
     padding-left: 5%;
 }
 
+.introSection, .countryCoffeeSection{
+    margin: 0%;
+} 
+
 @media (max-width: 576px) {
 
     .introSection {
@@ -67,4 +71,25 @@ body{
     .mainPageImg {
         width: 75%;
     }
+}
+
+.suggestion_img{
+    display: flex;
+    flex-direction: row;
+} 
+
+.suggestion_img > img{
+    width: 30%;
+    background-size: cover;
+    margin: 1.5%;
+    border-radius: 5%;
+}
+
+.suggestSection{
+    margin: 3% 0%;
+}
+
+footer{
+    background-color: white;
+    padding: 2% 3%;
 }
