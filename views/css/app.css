@@ -6,17 +6,65 @@ body{
     border-right: 1px solid black;
 }
 
-#contact{
-    border-right: none;
+/* Navbardaki elemanların üstüne gelince için */
+.navElementText:hover {
+    color:rgb(255, 0, 0);
 }
 
+/* Navbar elemanlar arası paddingi kaldır */
 .li-0 {
     padding: 0px !important;
 }
 
-.dropdown-menu-center {
-    left: 50% !important;
-    right: auto !important;
-    text-align: center !important;
-    transform: translate(-50%, 0) !important;
+/* Navbarda küçük ekran dışında dropdown listeleri ortala */
+@media (min-width: lg) {
+    .dropdown-menu-center {
+        left: 50% !important;
+        right: auto !important;
+        text-align: center !important;
+        transform: translate(-50%, 0) !important;
+    } 
+}
+
+.mainPageImg {
+    width: 40%;
+    margin: 2.5% 5%;
+    border-radius: 5%;
+    box-shadow: 5px 5px coral;
+    padding: 0%;
+}
+
+.mainPageRightText {
+    text-align: center;
+    padding-right: 5%;
+}
+
+.mainPageLeftText {
+    text-align: center;
+    padding-left: 5%;
+}
+
+@media (max-width: 576px) {
+
+    .introSection {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+    }
+
+    .countryCoffeeSection {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 10%;
+    }
+
+    .mainPageRightText, .mainPageLeftText {
+        padding: 0% 5%;
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    .mainPageImg {
+        width: 75%;
+    }
 }
