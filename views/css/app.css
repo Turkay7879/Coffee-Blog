@@ -4,8 +4,35 @@ body{
     font-family: 'Oxygen', sans-serif;
 }
 
+.navbar {
+    background-color: #f8e5d7 !important;
+}
+
+.subMenuItem {
+    padding-top: 0.75rem;
+}
+
 #navElement > li {
     border-right: 1px solid black;
+}
+
+#navElement > li > ul {
+    /* background-clip: padding-box !important; */
+    background-color: #f8e5d7 !important;
+    padding: 0;
+}
+
+#navElement > li > ul > li > a {
+    height: 3rem;
+}
+
+#navElement > li > ul > li:hover {
+    border-left: 5px solid #681a1e;
+    
+}
+
+#navElement > li > ul > li > a:hover {
+    background-color: #f8e5d7 !important;
 }
 
 /* Navbardaki elemanların üstüne gelince için */
@@ -13,6 +40,10 @@ body{
     border: 3px solid #681a1e;
     padding: 3%;
     color:#681a1e;
+}
+
+.dropdown-divider {
+    margin: 0;
 }
 
 /* Navbar elemanlar arası paddingi kaldır */
@@ -36,6 +67,11 @@ body{
     border-radius: 5%;
     box-shadow: 10px 10px 5px #681a1e;
     padding: 0%;
+    transition: transform 0.5s;
+}
+
+.mainPageImg:hover {
+    transform: scale(1.1);
 }
 
 .coffeeBean{
@@ -96,6 +132,11 @@ body{
         flex-direction: column;
     }
 
+    .suggestion_img > div {
+        height: 9rem;
+        padding-bottom: 1rem;
+    }
+
     .suggestSection{
         width: 50%;
     }
@@ -107,6 +148,10 @@ body{
     .suggestSection-Parent{
         display: flex;
         flex-direction: row;
+    }
+
+    .suggest_btn > a {
+        padding-bottom: 1rem;
     }
 
 }
@@ -123,9 +168,16 @@ body{
 } 
 
 .suggestion_img > div > img{
+    border-radius: 5%;
+    box-shadow: 0px 10px 5px #681a1e;
     width: 75%;
     margin: 1.5%;
     border-radius: 5%;
+    transition: transform 0.5s;
+} 
+
+.suggestion_img > div > img:hover{
+    transform: scale(1.05);
 } 
 
 .suggestSection{
@@ -133,7 +185,7 @@ body{
 }
 
 footer{
-    background-color: white;
+    background-color: #f0ece2;
     padding: 2% 3%;
 }
 
@@ -178,6 +230,6 @@ footer{
 
 .hb-fill-right:hover {
     color: rgb(255, 255, 255);
-    background: #eeba92;/*#eeba93;*/ /*#681a1e;*/
+    background: #681a1e;/*#eeba93;*/ /*#681a1e;*/
     transition: color 0.3s ease 0s, background 0s ease 0.3s;
 } 
