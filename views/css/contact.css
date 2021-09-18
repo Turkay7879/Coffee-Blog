@@ -1,3 +1,19 @@
 h1 {
     margin-top: 5%;
 }
+
+.nt-element{
+    display: flex;
+    flex-direction: column; 
+    width: 23.8%;
+    padding: 20px;
+}
+
+.email, .message{
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+#email, #message{
+    width: 45%;
+}
