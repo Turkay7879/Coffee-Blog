@@ -106,31 +106,30 @@
 
     <h1 class="d-flex justify-content-center">Bizimle İletişime Geçin</h1>
 
-    <form action="#nowhere">
-        <div class="name-tel d-flex justify-content-center">
-            <div class="nt-element">
-                <label for="name">Ad</label>
-                <input type="text" class="form-control" name="name" id="name"></input>
+    <div class="container">
+        <form action="#nowhere">
+            <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label for="name">İsim</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="tel">Telefon(Opsiyonel)</label>
+                    <input type="text" class="form-control" id="tel" placeholder="5XX-XXX-XXXX">
+                </div>
             </div>
-            <div class="nt-element">
-                <label for="tel">Telefon</label>
-                <input type="text" class="form-control" id="tel">
-            </div>
-        </div>
-        <div class="row">
-            <div class="email d-flex align-items-center">
+            <div class="mb-3">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="email">
+                <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
             </div>
-        </div>
-        <div class="row">
-            <div class="message d-flex align-items-center">
+            <div class="mb-3">
                 <label for="address">Mesaj</label>
-                <input type="text" class="form-control" id="message" placeholder="923 Chicken Ranch St">
+                <input type="text" class="form-control" id="address">
             </div>
-        </div>
+        </form>
+    </div>
 
-        <!-- <button type="submit" class="btn btn-success">Register</button> -->
+    <!-- <button type="submit" class="btn btn-success">Register</button> -->
     </form>
 
     <footer class="d-flex flex-wrap justify-content-between align-items-center border-top">
