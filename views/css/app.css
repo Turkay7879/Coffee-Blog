@@ -1,7 +1,8 @@
 body{
     background-color: #eeba93;
     /* font-family: 'Assistant', sans-serif; */
-    font-family: 'Oxygen', sans-serif;
+    /* font-family: 'Oxygen', sans-serif; */
+    font-family: 'PT Serif', serif;
 }
 
 .navbar {
