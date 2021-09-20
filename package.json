@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/iremdnz/Coffee-Blog/issues"
   },
-  "homepage": "https://github.com/iremdnz/Coffee-Blog#readme"
+  "homepage": "https://github.com/iremdnz/Coffee-Blog#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
