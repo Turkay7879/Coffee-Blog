@@ -1,0 +1,7 @@
+.contactBanner {
+    background-image: url(../img/Basically-Coffee.jpg);
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
