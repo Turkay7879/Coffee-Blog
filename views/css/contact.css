@@ -17,6 +17,10 @@
     margin-top: 4%;
 }
 
+#sendFormButton:hover{
+    background-color: #681a1e;
+}
+
 #message {
     resize: none;
 }
