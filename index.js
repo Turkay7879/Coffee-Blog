@@ -14,14 +14,30 @@ app.set("views", path.join(__dirname, "/views"));
 app.use(express.static(path.join(__dirname, "/views")));
 
 app.get("/", (req, res) => {
-    //console.log(__dirname);
-    res.sendFile(path.join(__dirname, "/views/main.html"));
+    res.render("main");
 })
 
-app.get("/ejs", (req, res) => {
-    res.render("brewType");
+app.get("/brewtype/frenchpress", (req, res) => {
+    const imgPath = "../img/brew/french_press.jpg";
+    res.render("brewType", { imgPath });
+})
+
+app.get("/brewtype/v60", (req, res) => {
+    const imgPath = "../img/brew/v60.jpg";
+    res.render("brewType", { imgPath });
+})
+
+app.get("/brewtype/chemex", (req, res) => {
+    const imgPath = "../img/brew/chemex.jpg";
+    res.render("brewType", { imgPath });
 })
 
 app.get("/contact", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/contact.html"));
+    res.render("contact");
 })
+
+// Geçersiz bir sayfa açılırsa
+app.get("*", (req, res) => {
+    res.send("Aradığınız sayfaya ulaşılamıyor.");
+    //res.render("notFound");
+});

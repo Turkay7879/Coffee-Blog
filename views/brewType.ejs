@@ -8,150 +8,72 @@
     <title>Temp</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/brewType.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/brewType.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
-    <style>
-        .imgDiv {
-            width: 50%;
-            height: 700px;
-        }
-
-        .imgDiv>img {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/main/coffeeLogo.jpg" alt="" width="30" height="24">
-                <span>Coffee</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse row" id="navbarSupportedContent">
-                <div class="col-9">
-                    <ul class="navbar-nav row" id="navList">
-                        <div class="col li-0" id="navElement">
-                            <li class="nav-item text-center">
-                                <a class="nav-link active" aria-current="page" href="/"><span>Anasayfa</span></a>
-                            </li>
-                        </div>
-                        <div class=" col li-0" id="navElement">
-                            <li class="nav-item dropdown text-center">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span>Dünya Kahveleri</span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item subMenuItem" href="#"><span>Latin
-                                                Amerika</span></a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item subMenuItem" href="#"><span>Afrika</span></a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item subMenuItem" href="#"><span>Asya Pasifik</span></a></li>
-                                </ul>
-                            </li>
-                        </div>
-                        <div class="col li-0" id="navElement">
-                            <li class="nav-item dropdown text-center">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span>Demleme Çeşitleri</span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item subMenuItem" href="#"><span>French Press</span></a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item subMenuItem" href="#"><span>V60</span></a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item subMenuItem" href="#"><span>Chemex</span></a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item subMenuItem" href="#"><span>Tümünü Listele</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </div>
-                        <div class="col li-0" id="navElement">
-                            <li class="nav-item text-center">
-                                <a class="nav-link disabled"><span>Mağaza</span></a>
-                            </li>
-                        </div>
-                        <div class="col li-0" id="navElement">
-                            <li class="nav-item text-center">
-                                <a class="nav-link" aria-current="page" href="contact"><span>İletişim</span></a>
-                            </li>
-                        </div>
-                    </ul>
+    <%- include("partials/navCommon") %>
+
+        <div class="contactBanner">
+        </div>
+
+        <hr>
+
+        <div class="brewContent d-flex">
+            <div class="col-8">
+                <div class="imgDiv">
+                    <img src=<%=imgPath %> alt="Demleme Resmi">
+                    <!-- klasöre eklenen diğer fotolar ile denendi -->
+                    <!-- https://www.geeksforgeeks.org/how-to-auto-resize-an-image-to-fit-a-div-container-using-css/ -->
                 </div>
-                <div class="col-3">
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Aramak için yazın"
-                            aria-label="Search">
-                        <button id="search" class="btn btn1" type="submit">Ara</button>
-                    </form>
+                <div class="brewText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sed magnam, enim
+                    ipsam
+                    inventore, molestiae quae, necessitatibus neque esse dolor voluptatibus. Doloribus sint consectetur
+                    blanditiis accusantium obcaecati, cum quae soluta.
+                    Explicabo temporibus eligendi numquam incidunt iure earum inventore accusamus laudantium at
+                    laboriosam
+                    sapiente quaerat, magni unde delectus optio quis, voluptate veritatis deserunt? Sequi veritatis
+                    quaerat
+                    quia fuga fugiat totam aperiam.
+                    Consequatur ad illo doloremque pariatur nesciunt modi quis reprehenderit? Earum cum impedit rerum at
+                    iste repudiandae consectetur molestiae vero. Ipsum cupiditate sint ex animi, dolore repudiandae!
+                    Magnam,
+                    dicta voluptatum! Quo.</div>
+            </div>
+            <div class="col-4">
+                <div id="suggestTitle">
+                    <h5><b>Şunlara da bakabilirsiniz:</b></h5>
+                </div>
+                <div class="suggestedBrew">
+                    <a class="d-flex justify-content-center" href="http://">
+                        <img class="suggestImg" src="../img/brew/chemex.jpg" alt="Chemex Demleme"></a>
+                    <div class="suggestText">Chemex Demleme</div>
+                </div>
+                <div class="suggestedBrew">
+                    <a class="d-flex justify-content-center" href="http://">
+                        <img class="suggestImg" src="../img/brew/french_press.jpg" alt="French Press Demleme">
+                    </a>
+                    <div class="suggestText">French Press Demleme</div>
+                </div>
+                <div class="suggestedBrew">
+                    <a class="d-flex justify-content-center" href="http://">
+                        <img class="suggestImg" src="../img/brew/v60.jpg" alt="V60 Demleme">
+                    </a>
+                    <div class="suggestText">V60 Demleme</div>
                 </div>
             </div>
         </div>
-    </nav>
 
-    <div class="contactBanner">
-    </div>
+        <%- include("partials/footerCommon") %>
 
-
-    <div class="cont row d-flex">
-        <div class="imgDiv col-6">
-            <img src="img/chemex.jpg" alt=""> <!-- klasöre eklenen diğer fotolar ile denendi -->
-            <!-- https://www.geeksforgeeks.org/how-to-auto-resize-an-image-to-fit-a-div-container-using-css/ -->
-        </div>
-        <div class="yazilar col-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolor
-            commodi suscipit neque reprehenderit officia nisi est quam et velit doloribus atque natus non error, ut
-            minima accusamus, consequatur omnis!</div>
-    </div>
-
-
-
-    <footer class="d-flex flex-wrap justify-content-between align-items-center border-top">
-        <p class="col-md-4 text-muted">© 2021 EdaTürkay, Inc.</p>
-
-        <a href="/"
-            class="col-md-4 d-flex align-items-center justify-content-centerme-md-auto link-dark text-decoration-none">
-            <svg class="bi me-2" width="40" height="32">
-                <use xlink:href="#bootstrap"></use>
-            </svg>
-        </a>
-
-        <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Anasayfa</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Yenilikler</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Mağaza</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">İletişim</a></li>
-
-        </ul>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+                crossorigin="anonymous"></script>
 </body>
 
 </html>
