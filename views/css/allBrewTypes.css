@@ -1,0 +1,36 @@
+.group1 {
+    margin-top: 15px;
+}
+
+.cardImg {
+    height: 350px;
+}
+
+@media (max-width: 576px) {
+    .card-group>.card {
+        margin-bottom: 0;
+    }
+}
+
+/* @media (max-width: 768px) {
+    
+    .card-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-body {
+        padding: 1rem 2.4rem;
+    }
+
+    .card {
+        width: 75%;
+        
+    }
+
+    .card img {
+        height: 300px;
+        width: 80%;
+        align-self: center;
+    }
+} */

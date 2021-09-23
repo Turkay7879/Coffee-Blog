@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temp</title>
+    <title><%= brewType %></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/app.css">
@@ -16,15 +16,15 @@
         rel="stylesheet">
     <style>
         .sugbtn1 {
-            background-image: url("<%= randImg[0] %>");
+            background-image: url("<%= randImg[0].path %>");
         }
 
         .sugbtn2 {
-            background-image: url("<%= randImg[1] %>");
+            background-image: url("<%= randImg[1].path %>");
         }
 
         .sugbtn3 {
-            background-image: url("<%= randImg[2] %>");
+            background-image: url("<%= randImg[2].path %>");
         }
     </style>
 </head>
@@ -38,7 +38,7 @@
         <hr>
 
         <div class="brewContent d-flex">
-            <div class="col-8">
+            <div class="col-8 mainContent">
                 <div class="imgDiv">
                     <img src=<%=imgPath %> alt="Demleme Resmi">
                     <!-- klasöre eklenen diğer fotolar ile denendi -->
@@ -57,33 +57,33 @@
                     Magnam,
                     dicta voluptatum! Quo.</div>
             </div>
-            <div class="col-4">
+            <div class="col-4 suggestions">
                 <div id="suggestTitle">
                     <h5><b>Şunlara da bakabilirsiniz:</b></h5>
                 </div>
                 <div class="suggestedBrew">
                     <div class="btnDiv">
-                        <a href="http://">
+                        <a href="<%= randImg[0].route %>">
                             <button class="sugbtn sugbtn1"></button>
                         </a>
                     </div>
-                    <div class="suggestText">Chemex Demleme</div>
+                    <div class="suggestText"><%= randImg[0].name %></div>
                 </div>
                 <div class="suggestedBrew">
                     <div class="btnDiv">
-                        <a href="http://">
+                        <a href="<%= randImg[1].route %>">
                             <button class="sugbtn sugbtn2"></button>
                         </a>
                     </div>
-                    <div class="suggestText">French Press Demleme</div>
+                    <div class="suggestText"><%= randImg[1].name %></div>
                 </div>
                 <div class="suggestedBrew">
                     <div class="btnDiv">
-                        <a href="http://">
+                        <a href="<%= randImg[2].route %>">
                             <button class="sugbtn sugbtn3"></button>
                         </a>
                     </div>
-                    <div class="suggestText">V60 Demleme</div>
+                    <div class="suggestText"><%= randImg[2].name %></div>
                 </div>
             </div>
         </div>
