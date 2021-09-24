@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= mainImg.name %>
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/coffeeVariety.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <%- include("partials/navCommon") %>
+
+
+        <div class="container d-flex">
+            <div class="col-6 imgCountry">
+                <img src=<%=mainImg.path%> alt="">
+            </div>
+            <div class="col-6 textCountry">
+                <h1>LOREM IPSUM</h1>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, eveniet.
+                Saepe
+                recusandae deleniti quo ipsam explicabo! Aut autem quisquam aliquid iusto repellendus obcaecati enim
+                necessitatibus eum possimus. Ut, sit veniam? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus earum id placeat voluptates! Itaque non soluta aliquid magni totam, provident sed
+                necessitatibus odio. Obcaecati doloribus illum magnam, iste iure magni.
+            </div>
+        </div>
+
+        <br><br>
+        <h2 class="text-center">Diğer Popüler Dünya Kahveleri</h2>
+
+        <div class="container">
+            <div class="suggestion_img row">
+                <div class="d-flex col-6">
+                    <img src=<%=choice1.path%> alt="Afrika">
+                    <a class="hbtn hb-fill-right" href=<%=choice1.route%>>
+                        <%=choice1.name%>
+                    </a>
+                </div>
+                <div class="d-flex col-6">
+                    <img src=<%=choice2.path%> alt="Asya">
+                    <a class="hbtn hb-fill-right" href=<%=choice2.route%>>
+                        <%=choice2.name%>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <%- include("partials/footerCommon") %>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+                crossorigin="anonymous"></script>
+
+</body>
+
+</html>

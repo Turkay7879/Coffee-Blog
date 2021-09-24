@@ -169,9 +169,10 @@ body{
 } 
 
 .suggestion_img > div > img{
+    height: 200px;
     border-radius: 5%;
     box-shadow: 0px 10px 5px #681a1e;
-    width: 75%;
+    width: 50%;
     margin: 1.5%;
     border-radius: 5%;
     transition: transform 0.5s;
@@ -180,6 +181,10 @@ body{
 .suggestion_img > div > img:hover{
     transform: scale(1.05);
 } 
+
+/* .suggestion_img > div{
+    flex-direction: column;
+}  */
 
 .suggestSection{
     margin: 3% 0%;
