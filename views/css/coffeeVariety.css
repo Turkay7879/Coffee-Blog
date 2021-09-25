@@ -1,60 +1,110 @@
+.mainContent {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+}
+
 .imgCountry{
     width: 50%;
     height: auto;
 }
 
 .imgCountry>img {
-    width: 100%;
-    height: 600px;
-    padding: 35px 30px 10px 20px; 
+    width: 90%;
+    height: 525px;
+    margin: 25px 20px 0px 20px; 
+    border-radius: 5%;
+    box-shadow: 10px 10px 5px #681a1e;
 }
 
 .textCountry{
     padding: 35px 20px 10px 30px; 
 }
 
-.suggestion_img > div{
+.countrySuggest {
+    width: 100%;
+}
+
+.countrySuggest > div{
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
 }
 
-.suggestion_img > div > img{
+.countrySuggest > div > img{
     width: 55%;
-    height: 350px;
-    margin: 20px 50px 30px 50px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 5%;
+    box-shadow: 0px 10px 5px #681a1e;
+    transition: transform 0.5s;
 }
 
-.suggestion_img > div > a{
+.countrySuggest > div > img:hover {
+    transform: scale(1.05);
+}
+
+.countrySuggest > div > a{
+    margin-top: 10px;
     width: 30%;
 }
 
-@media (max-width: 768px) {
-    .container{
-        flex-direction: column;
-    }
-
-    .imgCountry, .textCountry{
+@media (max-width: 975px) {
+    .countrySuggest {
         width: 100%;
     }
 
-    .suggestion_img{
-        display: flex;
+    .countrySuggest > div > img{
+        height: 200px !important;
+        width: 250px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .countrySuggest > div > a {
+        width: 150px;
+    }
+}
+
+@media (max-width: 785px) {
+    .mainContent {
         flex-direction: column;
     }
 
-    .suggestion_img > div{
+    .imgCountry {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imgCountry > img {
+        width: 75%;
+        height: 425px;
+    }
+
+    .textCountry {
+        width: 100%;
+    }
+
+    .countrySuggest{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .countrySuggest > div{
         display: flex;
         flex-direction: row;
-        align-self: flex-start;
+        /* align-self: flex-start; */
+        justify-content: center;
         width: 100%;
         height: 300px;
         margin: 0%;
     }
 
-    .suggestion_img > div > img{
+    .countrySuggest > div > img{
         height: 250px;
         width: 250px;
-        margin-bottom: 30px;
+        margin: 0px 7% 30px 0px;
     }
 }

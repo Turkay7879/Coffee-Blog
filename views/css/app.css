@@ -39,7 +39,7 @@ body{
 /* Navbardaki elemanların üstüne gelince için */
 #navElement > li > a > span:hover {
     border: 3px solid #681a1e;
-    padding: 3%;
+    padding: 1%;
     color:#681a1e;
 }
 
@@ -94,7 +94,15 @@ body{
     margin: 0%;
 } 
 
-@media (max-width: 576px) {
+@media (max-width: 850px) {
+    .suggestion_img > div > img {
+        width: 200px !important;
+        height: 175px !important;
+        margin: 10px 50px !important;
+    }
+}
+
+@media (max-width: 650px) {
 
     .introSection {
         display: flex;
@@ -118,14 +126,18 @@ body{
         width: 75%;
     }
 
-    #suggest_btn{
+    /* #suggest_btn{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-    }
+    } */
 
-    #suggest_btn > a{
+    /* #suggest_btn > a{
         width: 75%;
+    } */
+
+    .suggestSection {
+        width: 100% !important;
     }
 
     .suggestSection > div{
@@ -134,9 +146,23 @@ body{
     }
 
     .suggestion_img > div {
-        height: 9rem;
+        flex-direction: row !important;
+        width: 100%;
+        height: auto;
         padding-bottom: 1rem;
     }
+
+    .suggestion_img > div > img {
+        width: 200px !important;
+        height: 225px !important;
+        margin: 10px 50px !important;
+    }
+
+    /* .suggestion_img > div > a {
+        width: 200px !important;
+        height: 225px !important;
+        margin: 10px 50px !important;
+    } */
 
     .suggestSection{
         width: 50%;
@@ -151,9 +177,9 @@ body{
         flex-direction: row;
     }
 
-    .suggest_btn > a {
+    /* .suggest_btn > a {
         padding-bottom: 1rem;
-    }
+    } */
 
 }
 
@@ -166,13 +192,25 @@ body{
     display: flex;
     flex-direction: row;
     margin-top: 2%;
+    width: 100%;
 } 
 
+.suggestion_img > div {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.suggestion_img > div > a {
+    margin-top: 20px;
+    width: 150px !important;
+}
+
 .suggestion_img > div > img{
-    height: 200px;
+    height: 250px;
     border-radius: 5%;
     box-shadow: 0px 10px 5px #681a1e;
-    width: 50%;
+    width: 70%;
     margin: 1.5%;
     border-radius: 5%;
     transition: transform 0.5s;

@@ -22,9 +22,9 @@
     <%- include("partials/navCommon") %>
 
 
-        <div class="container d-flex">
+        <div class="mainContent">
             <div class="col-6 imgCountry">
-                <img src=<%=mainImg.path%> alt="">
+                <img src=<%=mainImg.path%> alt=<%= mainImg.name %>>
             </div>
             <div class="col-6 textCountry">
                 <h1>LOREM IPSUM</h1>
@@ -40,20 +40,18 @@
         <br><br>
         <h2 class="text-center">Diğer Popüler Dünya Kahveleri</h2>
 
-        <div class="container">
-            <div class="suggestion_img row">
-                <div class="d-flex col-6">
-                    <img src=<%=choice1.path%> alt="Afrika">
+        <div class="countrySuggest row">
+            <div class="d-flex col-6">
+                <img src=<%=choice1.path%> alt=<%=choice1.name%>>
                     <a class="hbtn hb-fill-right" href=<%=choice1.route%>>
                         <%=choice1.name%>
                     </a>
-                </div>
-                <div class="d-flex col-6">
-                    <img src=<%=choice2.path%> alt="Asya">
+            </div>
+            <div class="d-flex col-6">
+                <img src=<%=choice2.path%> alt=<%=choice2.name%>>
                     <a class="hbtn hb-fill-right" href=<%=choice2.route%>>
                         <%=choice2.name%>
                     </a>
-                </div>
             </div>
         </div>
 
