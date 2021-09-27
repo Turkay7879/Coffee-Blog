@@ -35,25 +35,27 @@
                 <h5><b>Instagram:</b> @iremdnz26 @turkay_7879</h5>
             </div>
             <br><br>
-            <form action="#nowhere">
+            <form action="../contact" method="POST">
                 <div class="row">
                     <div class="mb-3 col-md-6">
                         <label for="name"><b>İsim *</b></label>
-                        <input type="text" class="form-control" id="name" placeholder="İsminizi girin" required>
+                        <input name="isim" type="text" class="form-control" id="name" placeholder="İsminizi girin"
+                            required>
                     </div>
                     <div class="mb-3 col-md-6">
                         <label for="tel"><b>Telefon</b></label>
-                        <input type="text" class="form-control" id="tel" placeholder="Örn: 5XX-XXX-XXXX">
+                        <input name="telefon" type="text" class="form-control" id="tel" placeholder="Örn: 5XX-XXX-XXXX">
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="email"><b>Email *</b></label>
-                    <input type="email" class="form-control" id="email" placeholder="Örn: example@gmail.com" required>
+                    <input type="email" name="email" class="form-control" id="email"
+                        placeholder="Örn: example@gmail.com" required>
                 </div>
                 <div class="mb-3">
                     <label for="message"><b>Mesaj *</b></label>
-                    <textarea class="form-control" rows="7" maxlength="998" id="message" placeholder="Mesajınız"
-                        required></textarea>
+                    <textarea class="form-control" name="mesaj" rows="7" maxlength="998" id="message"
+                        placeholder="Mesajınız" required></textarea>
                 </div>
                 <div>
                     <button id="sendFormButton" type="submit" class="hbtn hb-fill-right sendFormButton">Gönder</button>

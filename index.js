@@ -20,6 +20,9 @@ app.listen(port, () => {
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 //views klasörünün yönünü direkt görmesi için
 app.use(express.static(path.join(__dirname, "/views")));
 
@@ -111,6 +114,11 @@ app.get("/brewtype", (req, res) => {
 app.get("/contact", (req, res) => {
     res.render("contact");
 })
+
+app.post("/contact", (req, res) => {
+    const { isim, telefon, email, mesaj } = req.body;
+    res.send("hipiti hopiti post request alindi");
+});
 
 // Geçersiz bir sayfa açılırsa
 app.get("*", (req, res) => {
