@@ -3,6 +3,10 @@ body{
     font-family: 'PT Serif', serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .navbar {
     background-color: #f8e5d7 !important;
 }
@@ -32,6 +36,7 @@ body{
 
 #navElement > li > ul > li > a:hover {
     background-color: #f8e5d7 !important;
+    color: #681a1e;
 }
 
 /* Navbardaki elemanların üstüne gelince için */
@@ -42,7 +47,7 @@ body{
 }
 
 .contactBanner {
-    background-image: url(../img/Basically-Coffee.jpg);
+    background-image: url(../img/banner.jpg);
     height: 400px;
     background-size: cover;
     background-repeat: no-repeat;

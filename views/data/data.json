@@ -1,0 +1,135 @@
+{
+    "coffees" : [
+        {
+            "name" : "V60 Demleme",
+            "path" : "../img/brew/v60.jpg",
+            "route" : "../brewtype/v60"
+        },
+        {
+            "name" : "French Press Demleme",
+            "path" : "../img/brew/french_press.jpg",
+            "route" : "../brewtype/frenchpress"
+        },
+        {
+            "name" : "Chemex Demleme",
+            "path" : "../img/brew/chemex.jpg",
+            "route" : "../brewtype/chemex"
+        },
+        {
+            "name" : "AeroPress Demleme",
+            "path" : "../img/brew/aeropress.jpg",
+            "route" : "../brewtype/aeropress"
+        },
+        {
+            "name" : "Syphon Demleme",
+            "path" : "../img/brew/syphon.jpg",
+            "route" : "../brewtype/syphon"
+        },
+        {
+            "name" : "Moka Pot Demleme",
+            "path" : "../img/brew/mokapot.jpg",
+            "route" : "../brewtype/mokapot"
+        }
+    ],
+    "brewInstructions" : {
+        "frenchPress" : {
+            "intro" : "French press kahve yoğun ve ağırdır, ancak kendine has bir zarafete sahiptir. Her yöntemde olduğu gibi, şeytan ayrıntıda gizlidir: kahveniz demlendikten hemen sonra süzün, böylece beklendiğinden daha acı olmaz. İyi bir demleme adına şu adımları takip edebilirsiniz:",
+            "details" : ["Suyunuzu kaynatın ve 1-1.5 dakika bekleyin. Kahvenizi yakmamanız adına su sıcaklığının 95 dereceyi geçmemesine özen gösterebilirsiniz.",
+                "Kahvenizin hızlı soğumasını engellemek adına, fincanınızı ve french pressinizi sıcak su ile ısıtabilirsiniz.",
+                "200 ml su için 18 gr Kahveyi french pressinize koyun.",
+                "Tüm kahveyi ıslatacak kadar su ekleyip karıştırın ve 30 saniye bekleyin. Ön demleme kahvenizin aromasını artıracaktır.",
+                "Suyun geri kalanını ekleyin ve 4 dakika boyunca demlenmeye bırakın. Kahvenizde istediğiniz sertliğe göre, demleme süresini artırıp azaltabilirsiniz.",
+                "Kahveniz hazır, yavaşça pressledikten sonra fincana doldurabilirsiniz."]
+        },
+        "v60" : {
+            "intro" : "V60, sağladığı esneklik ve özgürlük nedeniyle profesyoneller ve kahve severler tarafından sevilen bir demleme aparatıdır. Aşağıdaki yöntemleri takip ederek siz de V60 kullanarak kendi kahvenizi demleyebilirsiniz:",
+            "details" : [
+                "Filte kağıdını çizgili yerinden düzgünce katlayın ve yerleştirin. Kahveden gelebilecek kağıt tadını veya soğumasını engellemek için, ekipmanı kahveyi koyacağınız fincan veya sürahinin üzerine yerleştirin ve filtre kağıdını ısıtın.",
+                "Bir kişi için 18 gr kahve ve 250 ml su yeterlidir. Kahveyi ekleyin ve düzlemek için ekipmanı hafifçe sallayın.",
+                "Yaklaşık 50 ml suyu ekleyin ve 30 saniye bekleyin. Bu şekilde, kahveniz aromatik olarak daha zengin olacaktır. Kalan suyu kağıda değmeyecek şekilde yavaşça kahvenin üzerine gezdirin.",
+                "3 dakika içinde kahveniz hazır."
+            ]
+        },
+        "chemex" : {
+            "intro" : "Chemex, büyük ölçüde pürüzsüz bir tasarım, kullanım kolaylığı ve bardağa getirdiği kavrulmuş kahve aromalarının birleşimi nedeniyle bugüne kadar klasik, en sevilen kahve demleyicilerinden biri olmaya devam ediyor. Şu adımları takip ederek, bir Chemex ile güzel bir kahve demleyebilirsiniz:",
+            "details" : [
+                "Chemex filtresinin üç katlı kısmını ağız bölümüne yerleştirin. Daha sonra kağıt kokusunu ve soğumayı engellemek adına, filtre kağıdını ve chemexin içini sıcak suyla ısıtın.",
+                "Orta boyutta öğütülmüş 18 gr kahveyi filtrenin içine dökün.",
+                "50 ml suyu ekleyip 30-45 saniye arası bekleyin. Böylece daha yoğun aromalı bir kahve elde edeceksiniz.",
+                "Daha sonra 200 ml suyu dairesel hareketlerle kahvenin üzerine ekleyin.",
+                "3-5 dakika arasında kahveniz hazır olacaktır."
+            ]
+        },
+        "syphon" : {
+            "intro" : "Sifon, hassas, çay benzeri bir fincan kahve üretebilir. Bu yöntem ile demlemenin temeli, aslında buhar basıncına ve vakuma dayanır. Şu adımları takip ederek, siz de evinizde Sifon demlemeyle güzel bir fincan kahve hazırlayabilirsiniz:",
+            "details" : [
+                "Bir porsiyon için 250 ml su ve 18 gr kahve gereklidir.",
+                "Suyu alttaki hazneye, kahveyi ise üstteki hazneye yerleştirin ve ısıtıcıyı aktif hale getirin.",
+                "Su bir miktar ısındıktan sonra ekipmanın içindeki borudan basınç yardımıyla üst hazneye geçecektir.",
+                "Kahve burada 90 saniye kadar demlendikten sonra alttaki ısıtıcıyı çekebilirsiniz. Böylelikle alt haznenin basıncı düşecek ve demlenmiş kahve alt hazneye dolacaktır.",
+                "Kahveniz servise hazır."
+            ]
+        },
+        "aeropress" : {
+            "intro" : "Aeropress, yoğun aromalı, içimi kolay ve düşük asitli kahve hazırlamanızı sağlayan yapısı ile kahvenizi yüksek basınçla demlemenizi sağlayan bir kahve demleme aparatıdır. Aşağıdaki adımları takip ederek, bir Aeropress ile siz de kahvenizi demleyebilirsiniz:",
+            "details" : [
+                "Aeropressinizin içini ısıtın. Daha sonra 18 gr kahveyi döküp 50 ml su ekleyerek karıştırın ve 45 saniye bekleyin.",
+                "Ardından 200 ml suyu yavaşça ilave edin, bu aşamanın önceki adımla beraber yaklaşık 90 sn sürmesi önerilir.",
+                "Filtre kağıdını ıslatıp aeropressinize yerleştirin.",
+                "Aeropressinizi fincanınızın üzerine koyup 30 sn. boyunca pressleyin. Kahveniz hazır."
+            ]
+        },
+        "mokapot" : {
+            "intro" : "Moka pot, kahveyi hızlı bir şekilde demleyen basit bir alettir ve ayrıca temizlenmesi de oldukça kolaydır. Bir Moka kabı, basınçlı kaynar suyu öğütülmüş kahveden alt hazneden üste doğru hareket ettirerek çalışır. Aşağıdaki adımları takip ederek, Moka Pot aracılığıyla kahvenizi demleyebilirsiniz:",
+            "details" : [
+                "Moka pot üç farklı bölümden oluşuyor. En alt bölüme su koyun.",
+                "Orta bölüme kahvenizi ekleyin. Kahvenizin yanmaması adına, hazneye fazla kahve eklemeyin veya sıkıştırmayın.",
+                "Moka potunuzu ocağa yerleştirebilirsiniz. Su kaynadıkça kahveniz en üst bölümde toplanacaktır. Kahvenizi en başta soğuk suyla kısık ateşte pişirmeniz, kahvenizin daha lezzetli olmasına yardım edecektir.",
+                "Moka potunuzu kesinlike bulaşık makinesinde yıkamayın ve her demlemede tüm kapasitesini dolduracak şekilde kahve ve su ekleyin."
+            ]
+        }
+    },
+    "continents" : [
+        {
+            "name" : "Latin Amerika",
+            "path": "../img/continent/latin.jpg",
+            "route": "../coffeevariety/latinamerica"
+        },
+        {
+            "name": "Afrika",
+            "path": "../img/continent/africa.jpg", 
+            "route": "../coffeevariety/africa"
+        },
+        {
+            "name": "Asya Pasifik", 
+            "path": "../img/continent/asia.jpg", 
+            "route": "../coffeevariety/asia"
+        }
+    ],
+    "variety" : {
+        "latinAmerica" : {
+            "title" : "Latin Amerika Kahveleri",
+            "text" : [
+                "Latin Amerika ülkeleri coğrafi olarak kahve yetişimine oldukça uygundur. Yağmur ormanları, verimli topraklar, dağlar ve nehirler sayesinde farklı aromalara sahip kahve çekirdeklerinin yetişmesine olanak sağlar. Latin Amerika kahve çeşitlerinin de tüm dünya genelinde çokça tercih edilme sebeplerinden biri budur.",
+                "Latin Amerika kahveleri arasında en popüler kahvelerden birisi Brezilya kahvesidir. Dünyanın kahve ihtiyacının üçte ikisini Brezilya karşılamaktadır. Minas bölgesinde yetiştirilen kahve ile, Rio ve Santos kahveleri oldukça meşhurdur. Minas kahvesi Türk kahvesi yapımında da kullanılmaktadır. Rio kahvesi daha çok Balkan ve Orta Doğu ülkelerinin tercih ettiği kahvedir.",
+                "Ayrıca, Latin Amerika kahvelerinde popüler olan diğer bir çeşit ise Kolombiya kahvesidir. Kolombiya da kahve üretiminde sektörde ciddi anlamda payı olan bir ülkedir. Yıllık on bir milyon torba kahve üretimine sahiptir. Kolombiya, kahve yetiştirmede sıradağlardan oluşan ve kuzeyden güneye doğru ayrılan üç bölümden verim alır. Kolombiya kahvesi ıslak işlenir ve küçük kaplarda öğütülür."
+            ]
+        },
+        "africa" : {
+            "title" : "Afrika Kahveleri",
+            "text" : [
+                "Afrika kahveleri, kahve çekirdekleri arasında asidik tatları sevenler tarafından yoğun olarak tercih edilen ve geniş bir özelliğe sahip olan kahve çeşitleri arasında yer almaktadır. Afrika’nın kendisine özgü yapısı ve iklim, toprak, hava koşulları ile birlikte kahvelerinin de özel bir tat bulması nedeniyle ayrıcalıklı kahve deneyimi yaşamak isteyenler için özel kahveleri sunmaktadır.",
+                "Tüm dünya tarafından, Afrika kahveleri arasında Etiyopya kahvesi ilk sırada gelmektedir. Etiyopya’da toplam 4 bin kilometrekare alanın üzerinde bir alanda kahve yetişmektedir. Etiyopya kahvesi hafif meyveli ve narenciye notaları ile bilinmektedir. Etiyopya kahveleri kendi içlerinde de Sidamo, Ghimbi ve Harar gibi bölgelere ayrılmaktadırlar. Orta içimli, aromatik bir kahve deneyimi yaşamak isteyenlerin tercihi olmaktadır.",
+                "Diğer bir popüler Afrika kahvesi olan Kenya, bölge olarak volkanik özelliklere sahip olan bir yerdir ve kahve çekirdekleri de volkanik zenginlikten yararlanarak asitli bir yapıya sahiptir. Arabica türünde olan Kenya kahvesinin en büyük özelliği herkes tarafından kolayca fark edilebilen asitli bir tadının olmasıdır.  Gövde olarak zengin ve ağır, asitlik açısından da parlak ve kokulu aroması ile öne çıkan Kenya kahvesi, kahveden farklı bir aroma deneyimi yaşamak isteyenlerin tercihi olmaktadır."
+            ]
+        },
+        "asiaPacific" : {
+            "title" : "Asya Pasifik Kahveleri",
+            "text" : [
+                "Asya-Pasifik alanında, çok çeşitli iklimler ve topografyalar görülür ve dünyanın en dikkat çeken kahvelerinden bazıları burada yetiştirilir. Papua Yeni Gine ve Doğu Timor'un yıkanmış kahveleri dışında, bu bölgeden alınan kahvelerin büyük bölümü yarı yıkanmış ve dolgun gövdeli kahvelerdir. Yarı yıkanmış kahvelerin asitliği dengeli, güçlü topraksı kokuları ve bitkisel aromaları vardır.",
+                "Asya-Pasifik'te popüler olan Endonezya'da, hem Coffea Arabica hem de Coffea Canephora yetiştirilir. Endonezya'nın yüksek kaliteli kahveler düşük asitliğe, hoş ve zengin tatlara sahip iken, düşük kalitedeki kahveler küfsü kokusuna ve hoş olmayan sertliğe sahiptir. Misk kedisi cinsi olan Luwak hayvanı ile ünlü 'Kopi Luwak' kahvesi de bu yörede üretilmektedir.",
+                "Kahvesiyle Asya-Pasifik bölgelerinde popüler olan bir diğer ülke olan Vietnam'da kahve üretimi, Fransız misyonerlerin 19. yüzyılın ortalarında Coffea Arabica ağaçlarını ekmesiyle başlamıştır. Günümüzde bu ülke en büyük kahve üreticilerinden biridir, fakat Vietnam'da artık sadece Coffea Canephora yetiştirilir. Burada yetiştirilen kahve genellikle harmanlamada kullanılır. Tat yapısında odunsu, düz tatlar hakimdir. Genelde kuru işleme yöntemi tercih edilir."
+            ]
+        }
+    }
+}

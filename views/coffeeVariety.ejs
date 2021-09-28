@@ -27,13 +27,10 @@
                 <img src=<%=mainImg.path%> alt=<%= mainImg.name %>>
             </div>
             <div class="col-6 textCountry">
-                <h1>LOREM IPSUM</h1>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, eveniet.
-                Saepe
-                recusandae deleniti quo ipsam explicabo! Aut autem quisquam aliquid iusto repellendus obcaecati enim
-                necessitatibus eum possimus. Ut, sit veniam? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus earum id placeat voluptates! Itaque non soluta aliquid magni totam, provident sed
-                necessitatibus odio. Obcaecati doloribus illum magnam, iste iure magni.
+                <h1><%= title %> </h1>
+                <% for (let i = 0; i < text.length; i++) { %>
+                    <p><%= text[i] %> </p>
+                    <% } %>  
             </div>
         </div>
 

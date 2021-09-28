@@ -46,24 +46,16 @@
             <div class="col-8 mainContent">
                 <div class="imgDiv">
                     <img src=<%=imgPath %> alt="Demleme Resmi">
-                    <!-- klasöre eklenen diğer fotolar ile denendi -->
                 </div>
                 <div class="brewText">
-                    <p>1) Suyunuzu kaynatın ve 1-1.5 dakika bekleyin. 95 derecenin üstündeki su kahvenizi
-                        yakacaktır.</p>
-
-                    <p>2) Fincanınızı ve french pressinizi sıcak su ile ısıtın. Kahvenizin hemen soğumasını
-                        önleyecektir.</p>
-
-                    <p>3) 200 ml su için 18 gr Kahveyi french pressinize koyun.</p>
-
-                    <p>4) Tüm kahveyi ıslatacak kadar su ekleyip karıştırın ve 30 saniye bekleyin. Ön demleme kahvenizin
-                        aromasını artıracaktır.</p>
-
-                    <p>5) Suyun geri kalanını ekleyin ve 4 dakika boyunca demlenmeye bırakın. Demleme süresini uzatmak
-                        kahvenizin sertliğini artıracaktır.</p>
-
-                    <p>6) Kahveniz hazır, yavaşça pressledikten sonra fincana doldurabilirsiniz.</p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp; <%= intro %> 
+                    </p>
+                    <ol>
+                        <% for (let i = 0; i < instructions.length; i++) { %> 
+                            <li><%= instructions[i] %> </li>
+                            <% } %> 
+                    </ol>
                 </div>
             </div>
             <div class="col-4 suggestions">

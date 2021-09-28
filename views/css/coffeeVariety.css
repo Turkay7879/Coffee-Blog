@@ -21,6 +21,10 @@
     padding: 35px 20px 10px 30px; 
 }
 
+.textCountry h1 {
+    margin-bottom: 5%;
+}
+
 .countrySuggest {
     width: 100%;
 }
@@ -95,7 +99,6 @@
     .countrySuggest > div{
         display: flex;
         flex-direction: row;
-        /* align-self: flex-start; */
         justify-content: center;
         width: 100%;
         height: 300px;
