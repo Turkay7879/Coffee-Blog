@@ -45,45 +45,51 @@ app.get("/", (req, res) => {
 })
 
 app.get("/brewtype/frenchpress", (req, res) => {
+    const brewName = "French Press";
     const randImg = selectImg("french_press");
     const imgPath = "../img/brew/french_press.jpg";
     const brewType = photos.find(brew => brew.path === imgPath).name;
-    res.render("brewType", { brewType, imgPath, randImg });
+    res.render("brewType", { brewName, brewType, imgPath, randImg });
 })
 
 app.get("/brewtype/v60", (req, res) => {
+    const brewName = "V60";
     const randImg = selectImg("v60");
     const imgPath = "../img/brew/v60.jpg";
     const brewType = photos.find(brew => brew.path === imgPath).name;
-    res.render("brewType", { brewType, imgPath, randImg });
+    res.render("brewType", { brewName, brewType, imgPath, randImg });
 })
 
 app.get("/brewtype/chemex", (req, res) => {
+    const brewName = "Chemex";
     const randImg = selectImg("chemex");
     const imgPath = "../img/brew/chemex.jpg";
     const brewType = photos.find(brew => brew.path === imgPath).name;
-    res.render("brewType", { brewType, imgPath, randImg });
+    res.render("brewType", { brewName, brewType, imgPath, randImg });
 })
 
 app.get("/brewtype/aeropress", (req, res) => {
+    const brewName = "AeroPress";
     const randImg = selectImg("aeropress");
     const imgPath = "../img/brew/aeropress.jpg";
     const brewType = photos.find(brew => brew.path === imgPath).name;
-    res.render("brewType", { brewType, imgPath, randImg });
+    res.render("brewType", { brewName, brewType, imgPath, randImg });
 });
 
 app.get("/brewtype/syphon", (req, res) => {
+    const brewName = "Syphon";
     const randImg = selectImg("syphon");
     const imgPath = "../img/brew/syphon.jpg";
     const brewType = photos.find(brew => brew.path === imgPath).name;
-    res.render("brewType", { brewType, imgPath, randImg });
+    res.render("brewType", { brewName, brewType, imgPath, randImg });
 });
 
 app.get("/brewtype/mokapot", (req, res) => {
+    const brewName = "Moka Pot";
     const randImg = selectImg("mokapot");
     const imgPath = "../img/brew/mokapot.jpg";
     const brewType = photos.find(brew => brew.path === imgPath).name;
-    res.render("brewType", { brewType, imgPath, randImg });
+    res.render("brewType", { brewName, brewType, imgPath, randImg });
 });
 
 app.get("/coffeevariety/latinamerica", (req, res) => {
@@ -122,6 +128,5 @@ app.post("/contact", (req, res) => {
 
 // Geçersiz bir sayfa açılırsa
 app.get("*", (req, res) => {
-    res.send("Aradığınız sayfaya ulaşılamıyor.");
-    //res.render("notFound");
+    res.render("notFound");
 });

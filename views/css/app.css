@@ -1,7 +1,5 @@
 body{
     background-color: #eeba93;
-    /* font-family: 'Assistant', sans-serif; */
-    /* font-family: 'Oxygen', sans-serif; */
     font-family: 'PT Serif', serif;
 }
 
@@ -42,6 +40,26 @@ body{
     padding: 1%;
     color:#681a1e;
 }
+
+.contactBanner {
+    background-image: url(../img/Basically-Coffee.jpg);
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactBanner > span{
+    color: whitesmoke;  
+    font-size: 80px;
+    background-color: #884d39d8;
+    box-shadow: 0 0 30px #884d39d8; 
+    border-radius: 3rem;
+    padding: 20px;
+} 
 
 .dropdown-divider {
     margin: 0;
@@ -99,6 +117,12 @@ body{
 .introSection, .countryCoffeeSection{
     margin: 0%;
 } 
+
+@media (max-width: 952px) {
+    .mainPageRightText, .mainPageLeftText {
+        margin: 5% 0%;  
+    }
+}
 
 @media (max-width: 850px) {
     .suggestion_img > div > img {
@@ -276,15 +300,68 @@ footer{
   /* =============== Hover Effect 1 ======================== */
   /* Change border color, background color and text color on hover */
   
-  .btn1 {
+.btn1 {
     transition: all 300ms cubic-bezier(0.39, 0.575, 0.565, 1);
     background-color: #f8e5d7;
     color: #681a1e;
     border: 2px solid #681a1e;
-  }
+}
   
-  .btn1:hover {
+.btn1:hover {
     box-shadow: 0px 0px 26px 8px #b94248;
     background-color: #681a1e;
     color: #f8e5d7;
-  }
+}
+
+.notFound > img{
+    width: 700px;
+    margin-bottom: 50px;
+    border-radius: 3rem;
+    box-shadow: 0px 10px 5px #681a1e;
+}
+
+.notFound{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+}
+  
+.nFfooter{
+    position: absolute;
+    height: 20px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+@media (max-width: 1009px) {
+    .notFound > img{
+        width: 600px;
+        margin-top: 50px;
+    }
+}  
+
+@media (max-width: 717px) {
+    .notFound > img{
+        width: 450px;
+        margin-top: 80px;
+    }
+}  
+
+hr.dotted {
+	background-color: #eeba93;
+	border-top: 10px dotted #681a1e;
+}
