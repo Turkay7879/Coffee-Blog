@@ -36,6 +36,7 @@ const selectImg = (img) => {
 
 const searchInData = async searchedKey => {
     const searchResults = [];
+    let flag = "";
 
     // Önce brewInstructions nesnesini dolaşmayı dene
     let keyCnt = 0;
@@ -43,11 +44,12 @@ const searchInData = async searchedKey => {
 
         // demlemenin introsunda arama kısmı
         if (blogData.brewInstructions[brewType].intro.toLowerCase().includes(searchedKey.toLowerCase())) {
-            const brewKey = Object.keys(blogData.brewInstructions)[keyCnt];
-            const foundCoffee = await coffeeInfo(brewKey);
+            const srcKey = Object.keys(blogData.brewInstructions)[keyCnt];
+            const foundResult = await coffeeInfo(srcKey);
 
-            if (searchResults.find(result => result.brewKey === brewKey) === undefined) {
-                searchResults.push({brewKey, foundCoffee});
+            if (searchResults.find(result => result.srcKey === srcKey) === undefined) {
+                flag = "0";
+                searchResults.push({ srcKey, foundResult, flag });
             }
 
         }
@@ -55,11 +57,12 @@ const searchInData = async searchedKey => {
         // Demleme adımlarının içinde aranılan kelime bulundu
         for (let paragraph of blogData.brewInstructions[brewType].details) {
             if (paragraph.toLowerCase().includes(searchedKey.toLowerCase())) {
-                const brewKey = Object.keys(blogData.brewInstructions)[keyCnt];
-                const foundCoffee = await coffeeInfo(brewKey);
+                const srcKey = Object.keys(blogData.brewInstructions)[keyCnt];
+                const foundResult = await coffeeInfo(srcKey);
 
-                if (searchResults.find(result => result.brewKey === brewKey) === undefined) {
-                    searchResults.push({brewKey, foundCoffee});
+                if (searchResults.find(result => result.srcKey === srcKey) === undefined) {
+                    flag = "0";
+                    searchResults.push({ srcKey, foundResult, flag });
                 }
 
             }
@@ -73,11 +76,12 @@ const searchInData = async searchedKey => {
 
         // Başlıklarda arama
         if (blogData.variety[country].title.toLowerCase().includes(searchedKey.toLowerCase())) {
-            const countryKey = Object.keys(blogData.variety)[keyCnt];
-            const foundCountry = await countryInfo(countryKey);
+            const srcKey = Object.keys(blogData.variety)[keyCnt];
+            const foundResult = await countryInfo(srcKey);
 
-            if (searchResults.find(result => result.countryKey === countryKey) === undefined) {
-                searchResults.push({countryKey, foundCountry});
+            if (searchResults.find(result => result.srcKey === srcKey) === undefined) {
+                flag = "1";
+                searchResults.push({ srcKey, foundResult, flag });
             }
 
         }
@@ -85,11 +89,12 @@ const searchInData = async searchedKey => {
         // Textlerde arama
         for (let paragraph of blogData.variety[country].text) {
             if (paragraph.toLowerCase().includes(searchedKey.toLowerCase())) {
-                const countryKey = Object.keys(blogData.variety)[keyCnt];
-                const foundCountry = await countryInfo(countryKey);
+                const srcKey = Object.keys(blogData.variety)[keyCnt];
+                const foundResult = await countryInfo(srcKey);
 
-                if (searchResults.find(result => result.countryKey === countryKey) === undefined) {
-                    searchResults.push({countryKey, foundCountry});
+                if (searchResults.find(result => result.srcKey === srcKey) === undefined) {
+                    flag = "1";
+                    searchResults.push({ srcKey, foundResult, flag });
                 }
 
             }
@@ -104,9 +109,9 @@ const coffeeInfo = async coffeeKey => {
     for (let i = 0; i < blogData.coffees.length; i++) {
         const coffee = blogData.coffees[i];
 
-        if (coffee.name.toLowerCase().includes(coffeeKey.toLowerCase()) 
-        || coffee.path.toLowerCase().includes(coffeeKey.toLowerCase())
-        || coffee.route.toLowerCase().includes(coffeeKey.toLowerCase())) {
+        if (coffee.name.toLowerCase().includes(coffeeKey.toLowerCase())
+            || coffee.path.toLowerCase().includes(coffeeKey.toLowerCase())
+            || coffee.route.toLowerCase().includes(coffeeKey.toLowerCase())) {
             return i;
         }
     }
@@ -117,19 +122,17 @@ const countryInfo = async countryKey => {
     for (let i = 0; i < blogData.continents.length; i++) {
         const country = blogData.continents[i];
 
-        if (country.name.toLowerCase().includes(countryKey.toLowerCase()) 
-        || country.path.toLowerCase().includes(countryKey.toLowerCase())
-        || country.route.toLowerCase().includes(countryKey.toLowerCase())) {
+        if (country.name.toLowerCase().includes(countryKey.toLowerCase())
+            || country.path.toLowerCase().includes(countryKey.toLowerCase())
+            || country.route.toLowerCase().includes(countryKey.toLowerCase())) {
             return i;
         }
     }
     return null;
 }
 
-app.get("/", async (req, res) => {
+app.get("/", (req, res) => {
     res.render("main");
-    const searchResult = await searchInData("Saniye");
-    console.log(searchResult);
 })
 
 app.get("/brewtype/frenchpress", (req, res) => {
@@ -196,7 +199,7 @@ app.get("/coffeevariety/latinamerica", (req, res) => {
     const mainImg = countryPhoto[0];
     const choice1 = countryPhoto[1];
     const choice2 = countryPhoto[2];
-    const {title, text} = blogData.variety.latinAmerica;
+    const { title, text } = blogData.variety.latinAmerica;
     res.render("coffeeVariety", { mainImg, choice1, choice2, title, text });
 });
 
@@ -204,7 +207,7 @@ app.get("/coffeevariety/africa", (req, res) => {
     const mainImg = countryPhoto[1];
     const choice1 = countryPhoto[0];
     const choice2 = countryPhoto[2];
-    const {title, text} = blogData.variety.africa;
+    const { title, text } = blogData.variety.africa;
     res.render("coffeeVariety", { mainImg, choice1, choice2, title, text });
 });
 
@@ -212,7 +215,7 @@ app.get("/coffeevariety/asia", (req, res) => {
     const mainImg = countryPhoto[2];
     const choice1 = countryPhoto[1];
     const choice2 = countryPhoto[0];
-    const {title, text} = blogData.variety.asia;
+    const { title, text } = blogData.variety.asia;
     res.render("coffeeVariety", { mainImg, choice1, choice2, title, text });
 });
 
@@ -228,6 +231,12 @@ app.post("/contact", (req, res) => {
     const { isim, telefon, email, mesaj } = req.body;
     // Daha düzgün bir mesaj göster, veya redirect?
     res.send("Mesajınız alınmıştır. İletişime geçtiğiniz için teşekkürler!");
+});
+
+app.post("/search", async (req, res) => {
+    const { searchKey } = req.body;
+    const searchResult = await searchInData(searchKey);
+    res.render("search", { searchResult, blogData });
 });
 
 // Geçersiz bir sayfa açılırsa

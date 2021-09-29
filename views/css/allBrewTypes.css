@@ -29,6 +29,10 @@
     .cardImg {
         height: 250px;
     }
+
+    .contactBanner > span{
+        font-size: 50px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -44,3 +48,4 @@
         height: 325px;
     }
 } 
+

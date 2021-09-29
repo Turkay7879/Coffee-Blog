@@ -1,0 +1,36 @@
+h1{
+    margin: 40px 0px;
+}
+
+.results{
+    width: 100%;
+}
+
+.results > div{
+    padding: 2rem;
+}
+
+.picture > img{
+    height: 350px;
+    width: 80%;
+    border-radius: 4rem;
+    /* padding: 3rem; */
+    border: 3px solid #681a1e;
+}
+
+.picture, .buttn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textName{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+.buttn > a{
+    width: 60%;
+}
+

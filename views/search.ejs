@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arama Sonuçları</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <%- include("partials/navCommon") %>
+
+        <h1 class="d-flex justify-content-center">Aradığınız kelimenin bulunduğu sayfalar</h1>
+
+        <% for(let result of searchResult) { %>
+            <div class="results row">
+                <div class="col-5 picture">
+                    <img src=<%=result.flag==="0" ? blogData.coffees[result.foundResult].path :
+                        blogData.continents[result.foundResult].path %> alt="">
+                </div>
+                <div class="col-3 textName">
+                    <%= result.flag==="0" ? blogData.coffees[result.foundResult].name :
+                        blogData.continents[result.foundResult].name %>
+                </div>
+                <div class="col-4 buttn">
+                    <a class="hbtn hb-fill-right" href=<%=result.flag==="0" ? blogData.coffees[result.foundResult].route
+                        : blogData.continents[result.foundResult].route %>>TIKLA</a>
+                </div>
+            </div>
+            <% } %>
+
+
+                <%- include("partials/footerCommon") %>
+
+
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+                        crossorigin="anonymous"></script>
+</body>
+
+</html>

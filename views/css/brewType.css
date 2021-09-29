@@ -116,3 +116,9 @@
         width: 20rem;
     }
 }
+
+@media (max-width: 768px) {
+    .contactBanner > span{
+        font-size: 50px;
+    }
+}

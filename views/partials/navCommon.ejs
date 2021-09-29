@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="../img/main/coffeeLogo.jpg" alt="" width="30" height="24">
             <span>Coffee</span>
         </a>
@@ -84,8 +84,9 @@
                 </ul>
             </div>
             <div class="search col-3">
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Aramak için yazın" aria-label="Search">
+                <form action="../search" method="POST" class="d-flex">
+                    <input class="form-control me-2" name="searchKey" type="search" placeholder="Aramak için yazın"
+                        aria-label="Search">
                     <button id="search" class="btn btn1" type="submit">Ara</button>
                 </form>
             </div>
