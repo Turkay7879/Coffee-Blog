@@ -6,10 +6,10 @@ const blogData = require('./views/data/data.json');
 
 const photos = blogData.coffees;
 const countryPhoto = blogData.continents;
-const fs = require('fs');
+//const fs = require('fs');
 
 app.listen(port, () => {
-    console.log("Helloo");
+    console.log("[*] Server is running now.");
 });
 
 app.set("view engine", "ejs");
@@ -18,9 +18,10 @@ app.set("views", path.join(__dirname, "/views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-//views klasörünün yönünü direkt görmesi için
+// Specify "views" folder path statically
 app.use(express.static(path.join(__dirname, "/views")));
 
+// Pick a random picture for suggested brews
 const selectImg = (img) => {
     let count = 0;
     const randImg = [];
@@ -35,15 +36,16 @@ const selectImg = (img) => {
     return randImg;
 }
 
+// Webpage search functionality in data.json
 const searchInData = async searchedKey => {
     const searchResults = [];
     let flag = "";
 
-    // Önce brewInstructions nesnesini dolaşmayı dene
+    // Search in brewInstructions object
     let keyCnt = 0;
     for (let brewType in blogData.brewInstructions) {
 
-        // demlemenin introsunda arama kısmı
+        // Searching in intro of a brew type
         if (blogData.brewInstructions[brewType].intro.toLowerCase().includes(searchedKey.toLowerCase())) {
             const srcKey = Object.keys(blogData.brewInstructions)[keyCnt];
             const foundResult = await coffeeInfo(srcKey);
@@ -55,7 +57,7 @@ const searchInData = async searchedKey => {
 
         }
 
-        // Demleme adımlarının içinde aranılan kelime bulundu
+        // Searching in steps of a brew type
         for (let paragraph of blogData.brewInstructions[brewType].details) {
             if (paragraph.toLowerCase().includes(searchedKey.toLowerCase())) {
                 const srcKey = Object.keys(blogData.brewInstructions)[keyCnt];
@@ -71,11 +73,11 @@ const searchInData = async searchedKey => {
         keyCnt++;
     }
 
-    // Ülkeler içinde de arama
+    // Search in variety object 
     keyCnt = 0;
     for (let country in blogData.variety) {
 
-        // Başlıklarda arama
+        // Searching in title of a country
         if (blogData.variety[country].title.toLowerCase().includes(searchedKey.toLowerCase())) {
             const srcKey = Object.keys(blogData.variety)[keyCnt];
             const foundResult = await countryInfo(srcKey);
@@ -87,7 +89,7 @@ const searchInData = async searchedKey => {
 
         }
 
-        // Textlerde arama
+        // Searching in text of a country
         for (let paragraph of blogData.variety[country].text) {
             if (paragraph.toLowerCase().includes(searchedKey.toLowerCase())) {
                 const srcKey = Object.keys(blogData.variety)[keyCnt];
@@ -106,6 +108,7 @@ const searchInData = async searchedKey => {
     return searchResults;
 }
 
+// Get a brew type's route, image path and name
 const coffeeInfo = async coffeeKey => {
     for (let i = 0; i < blogData.coffees.length; i++) {
         const coffee = blogData.coffees[i];
@@ -119,6 +122,7 @@ const coffeeInfo = async coffeeKey => {
     return null;
 }
 
+// Get a country's route, image path and name
 const countryInfo = async countryKey => {
     for (let i = 0; i < blogData.continents.length; i++) {
         const country = blogData.continents[i];
@@ -132,10 +136,12 @@ const countryInfo = async countryKey => {
     return null;
 }
 
+// Main page (main.ejs)
 app.get("/", (req, res) => {
     res.render("main");
 })
 
+// French press brewing page (brewType.ejs)
 app.get("/brewtype/frenchpress", (req, res) => {
     const brewName = "French Press";
     const randImg = selectImg("french_press");
@@ -146,6 +152,7 @@ app.get("/brewtype/frenchpress", (req, res) => {
     res.render("brewType", { brewName, brewType, imgPath, randImg, intro, instructions });
 })
 
+// V60 brewing page (brewType.ejs)
 app.get("/brewtype/v60", (req, res) => {
     const brewName = "V60";
     const randImg = selectImg("v60");
@@ -156,6 +163,7 @@ app.get("/brewtype/v60", (req, res) => {
     res.render("brewType", { brewName, brewType, imgPath, randImg, intro, instructions });
 })
 
+// Chemex brewing page (brewType.ejs)
 app.get("/brewtype/chemex", (req, res) => {
     const brewName = "Chemex";
     const randImg = selectImg("chemex");
@@ -166,6 +174,7 @@ app.get("/brewtype/chemex", (req, res) => {
     res.render("brewType", { brewName, brewType, imgPath, randImg, intro, instructions });
 })
 
+// Aeropress brewing page (brewType.ejs)
 app.get("/brewtype/aeropress", (req, res) => {
     const brewName = "AeroPress";
     const randImg = selectImg("aeropress");
@@ -176,6 +185,7 @@ app.get("/brewtype/aeropress", (req, res) => {
     res.render("brewType", { brewName, brewType, imgPath, randImg, intro, instructions });
 });
 
+// Syphon brewing page (brewType.ejs)
 app.get("/brewtype/syphon", (req, res) => {
     const brewName = "Syphon";
     const randImg = selectImg("syphon");
@@ -186,6 +196,7 @@ app.get("/brewtype/syphon", (req, res) => {
     res.render("brewType", { brewName, brewType, imgPath, randImg, intro, instructions });
 });
 
+// Moka Pot brewing page (brewType.ejs)
 app.get("/brewtype/mokapot", (req, res) => {
     const brewName = "Moka Pot";
     const randImg = selectImg("mokapot");
@@ -196,6 +207,7 @@ app.get("/brewtype/mokapot", (req, res) => {
     res.render("brewType", { brewName, brewType, imgPath, randImg, intro, instructions });
 });
 
+// Latin America coffees (coffeeVariety.ejs)
 app.get("/coffeevariety/latinamerica", (req, res) => {
     const mainImg = countryPhoto[0];
     const choice1 = countryPhoto[1];
@@ -204,6 +216,7 @@ app.get("/coffeevariety/latinamerica", (req, res) => {
     res.render("coffeeVariety", { mainImg, choice1, choice2, title, text });
 });
 
+// Africa coffees (coffeeVariety.ejs)
 app.get("/coffeevariety/africa", (req, res) => {
     const mainImg = countryPhoto[1];
     const choice1 = countryPhoto[0];
@@ -212,6 +225,7 @@ app.get("/coffeevariety/africa", (req, res) => {
     res.render("coffeeVariety", { mainImg, choice1, choice2, title, text });
 });
 
+// Asia and Pacific coffees (coffeeVariety.ejs)
 app.get("/coffeevariety/asia", (req, res) => {
     const mainImg = countryPhoto[2];
     const choice1 = countryPhoto[1];
@@ -220,10 +234,12 @@ app.get("/coffeevariety/asia", (req, res) => {
     res.render("coffeeVariety", { mainImg, choice1, choice2, title, text });
 });
 
+// List of all brew types (brewList.ejs)
 app.get("/brewtype", (req, res) => {
     res.render("brewList");
 });
 
+// Contact page (contact.ejs)
 app.get("/contact", (req, res) => {
     let submit = false;
     const submitted = req.query.submitted;
@@ -233,22 +249,18 @@ app.get("/contact", (req, res) => {
     res.render("contact", { submit });
 })
 
+// Contact page POST route for submitting the form
 app.post("/contact", (req, res) => {
     const { isim, telefon, email, mesaj } = req.body;
-    // blogData.userMessage.push({" name": isim, "tel": telefon, "email": email, "message": mesaj });
-    // var currentSearchResult = { " name": isim, "tel": telefon, "email": email, "message": mesaj };
 
-    // fs.readFile('../views/data/data.json', function (err, data) {
-    //     var json = JSON.parse(data)
-    //     json.userMessage.push('search result: ' + currentSearchResult)
-
-    //     fs.writeFile("../views/data/data.json", JSON.stringify(json))
-    // })
+    // Data sent by the form should be saved to data.json (Later to a server)
+    // Will be implemented on the future commits
 
     let submitted = encodeURIComponent("true");
     res.redirect('contact?submitted=' + submitted);
 });
 
+// Search results page
 app.post("/search", async (req, res) => {
     const { searchKey } = req.body;
     const searchResult = await searchInData(searchKey);
@@ -260,7 +272,7 @@ app.post("/search", async (req, res) => {
     }
 });
 
-// Geçersiz bir sayfa açılırsa
+// Returns notFound page if a route that doesn't exist is tried to be accessed
 app.get("*", (req, res) => {
     res.render("notFound");
 });
