@@ -20,7 +20,6 @@ html {
 }
 
 #navElement > li > ul {
-    /* background-clip: padding-box !important; */
     background-color: #f8e5d7 !important;
     padding: 0;
 }
