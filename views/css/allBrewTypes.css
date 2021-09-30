@@ -15,7 +15,7 @@
     height: 15rem;
 }
 
-@media (max-width: 879px) {
+@media (max-width: 1137px) {
     .card-body {
         height: 20rem;
     }
@@ -32,6 +32,12 @@
 
     .contactBanner > span{
         font-size: 50px;
+    }
+}
+
+@media (max-width: 628px) {
+    .card-body {
+        height: 26rem;
     }
 }
 
