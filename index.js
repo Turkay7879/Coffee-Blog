@@ -6,6 +6,7 @@ const blogData = require('./views/data/data.json');
 
 const photos = blogData.coffees;
 const countryPhoto = blogData.continents;
+const fs = require('fs');
 
 app.listen(port, () => {
     console.log("Helloo");
@@ -224,19 +225,39 @@ app.get("/brewtype", (req, res) => {
 });
 
 app.get("/contact", (req, res) => {
-    res.render("contact");
+    let submit = false;
+    const submitted = req.query.submitted;
+    if (submitted === "true") {
+        submit = true;
+    }
+    res.render("contact", { submit });
 })
 
 app.post("/contact", (req, res) => {
     const { isim, telefon, email, mesaj } = req.body;
-    // Daha düzgün bir mesaj göster, veya redirect?
-    res.send("Mesajınız alınmıştır. İletişime geçtiğiniz için teşekkürler!");
+    // blogData.userMessage.push({" name": isim, "tel": telefon, "email": email, "message": mesaj });
+    // var currentSearchResult = { " name": isim, "tel": telefon, "email": email, "message": mesaj };
+
+    // fs.readFile('../views/data/data.json', function (err, data) {
+    //     var json = JSON.parse(data)
+    //     json.userMessage.push('search result: ' + currentSearchResult)
+
+    //     fs.writeFile("../views/data/data.json", JSON.stringify(json))
+    // })
+
+    let submitted = encodeURIComponent("true");
+    res.redirect('contact?submitted=' + submitted);
 });
 
 app.post("/search", async (req, res) => {
     const { searchKey } = req.body;
     const searchResult = await searchInData(searchKey);
-    res.render("search", { searchResult, blogData });
+    if (searchResult.length === 0) {
+        res.redirect("notFound");
+    }
+    else {
+        res.render("search", { searchResult, blogData });
+    }
 });
 
 // Geçersiz bir sayfa açılırsa
